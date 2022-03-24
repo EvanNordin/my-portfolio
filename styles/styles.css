@@ -8,6 +8,7 @@
 
 :root {
   --primary-transition: all 0.4s ease-in-out;
+  --box-shadow-1: 0 3px 15px rgba(0, 0, 0, 0.2);
   --color-primary: #191d2b;
   --color-secondary: #27ae60;
   --color-white: #ffffff;
@@ -113,7 +114,17 @@ section {
           transform: translateY(-50%);
 }
 
-.control {
+.controls .active-btn {
+  background-color: var(--color-secondary) !important;
+  -webkit-transition: var(--primary-transition);
+  transition: var(--primary-transition);
+}
+
+.controls .active-btn i {
+  color: var(--color-white) !important;
+}
+
+.controls .control {
   padding: 1rem;
   cursor: pointer;
   background-color: var(--color-grey4);
@@ -129,5 +140,14 @@ section {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin: 0.7rem 0;
+  -webkit-box-shadow: var(--box-shadow-1);
+          box-shadow: var(--box-shadow-1);
+}
+
+.controls .control i {
+  font-size: 1.2rem;
+  color: var(--color-grey2);
+  pointer-events: none;
 }
 /*# sourceMappingURL=styles.css.map */
