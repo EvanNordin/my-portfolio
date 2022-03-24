@@ -18,12 +18,6 @@ const PageTransitions = () => {
     allSections.addEventListener('click', (event) => {
         const id = event.target.dataset.id;
         if(id){
-            //remove selected from the other btns
-            sectBtns.forEach(btn => {
-                btn.classList.remove('active');
-            });
-            event.target.classList.add('active');
-
             //hide the other sections
             sections.forEach(section => {
                 section.classList.remove('active');
