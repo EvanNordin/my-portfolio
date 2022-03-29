@@ -37,7 +37,7 @@
 }
 
 body {
-	font-family: "Poopins", sans-serif;
+	font-family: "Poppins", sans-serif;
 	background-color: var(--color-primary);
 	font-size: 1.1rem;
 	color: var(--color-white);
@@ -99,7 +99,7 @@ section {
 
 .active {
 	display: block;
-	animation: scaleAnim 1s ease-in-out;
+	animation: scaleAnim 1.25s ease-in-out;
 	@keyframes scaleAnim {
 		0% {
 			transform: translateY(-100%) scaleY(0);
@@ -497,7 +497,8 @@ section {
 	}
 }
 
-.portfolio-item:hover .hover-item {
+.portfolio-item:hover .hover-item,
+.portfolio-item:active .hover-item {
 	opacity: 1;
 	transform: scale(1);
 	transition: var(--primary-transition);

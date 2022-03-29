@@ -38,7 +38,7 @@
 }
 
 body {
-  font-family: "Poopins", sans-serif;
+  font-family: "Poppins", sans-serif;
   background-color: var(--color-primary);
   font-size: 1.1rem;
   color: var(--color-white);
@@ -108,8 +108,8 @@ section {
 
 .active {
   display: block;
-  -webkit-animation: scaleAnim 1s ease-in-out;
-          animation: scaleAnim 1s ease-in-out;
+  -webkit-animation: scaleAnim 1.25s ease-in-out;
+          animation: scaleAnim 1.25s ease-in-out;
 }
 
 @-webkit-keyframes scaleAnim {
@@ -681,7 +681,8 @@ section {
   color: var(--color-primary);
 }
 
-.portfolio-item:hover .hover-item {
+.portfolio-item:hover .hover-item,
+.portfolio-item:active .hover-item {
   opacity: 1;
   -webkit-transform: scale(1);
           transform: scale(1);
@@ -1024,6 +1025,7 @@ section {
 @media screen and (max-width: 600px) {
   header {
     padding: 0 !important;
+    overflow-y: scroll;
   }
   .theme-btn {
     width: 50px;
