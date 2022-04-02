@@ -6,7 +6,7 @@
 }
 
 :root {
-	--primary-transition: all 0.4s ease-in-out;
+	--primary-transition: all 1s ease-in-out;
 	--box-shadow-1: 0 3px 15px rgba(0, 0, 0, 0.2);
 	--color-primary: #191d2b;
 	--color-secondary: #27ae60;
@@ -41,7 +41,7 @@ body {
 	background-color: var(--color-primary);
 	font-size: 1.1rem;
 	color: var(--color-white);
-	transition: var(--primary-transition);
+	transition: all 1s ease-in-out;
 }
 
 a {
@@ -672,9 +672,10 @@ section {
 	align-self: flex-start;
 	align-items: center;
 	overflow: hidden;
-	transition: var(--primary-transition);
+	// transition: var(--primary-transition);
 	.btn-text {
 		padding: 0 2rem;
+		// transition: var(--primary-transition);
 	}
 	.btn-icon {
 		background-color: var(--color-secondary);
@@ -683,6 +684,7 @@ section {
 		justify-content: center;
 		border-radius: 50%;
 		padding: 1rem;
+		// transition: var(--primary-transition);
 	}
 	&::before {
 		content: "";
