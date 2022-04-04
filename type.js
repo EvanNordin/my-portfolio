@@ -1,5 +1,3 @@
-console.log("working")
-
 //Typewriter object constructor
 const TypeWriter = function(txtElement, words, wait = 3000){
     this.txtElement = txtElement;

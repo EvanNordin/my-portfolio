@@ -1315,6 +1315,7 @@ section {
   .left-header .image {
     width: 90% !important;
     margin: 0 auto !important;
+    display: none;
   }
   .right-header {
     -ms-grid-row: 1;
@@ -1324,13 +1325,25 @@ section {
     margin: 0 auto;
   }
   .right-header .name {
-    font-size: 2.5rem !important;
+    font-size: 1.5rem !important;
     text-align: center;
     padding-top: 3rem;
   }
   .right-header h2 {
-    font-size: 1.5rem !important;
+    font-size: 1.25rem !important;
     text-align: center;
+  }
+  .right-header p {
+    font-size: 1rem !important;
+    text-align: center;
+  }
+  .theme-btn {
+    right: 10%;
+  }
+  .btn-container {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
   }
 }
 
