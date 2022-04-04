@@ -6,7 +6,7 @@
 }
 
 :root {
-	--primary-transition: all 1s ease-in-out;
+	--primary-transition: all 0.4s ease-in-out;
 	--box-shadow-1: 0 3px 15px rgba(0, 0, 0, 0.2);
 	--color-primary: #191d2b;
 	--color-secondary: #27ae60;
@@ -38,10 +38,11 @@
 
 body {
 	font-family: "Poppins", sans-serif;
+	height: 100vh;
 	background-color: var(--color-primary);
 	font-size: 1.1rem;
 	color: var(--color-white);
-	transition: all 1s ease-in-out;
+	transition: all 0.25s ease-in-out;
 }
 
 a {
@@ -49,6 +50,18 @@ a {
 	text-decoration: none;
 	color: inherit;
 	font-family: inherit;
+}
+h1,
+h2 {
+	margin: 0.4rem;
+}
+h1 {
+	font-size: 3.5rem;
+}
+h2 {
+	font-size: 2.5rem;
+	font-weight: 200;
+	color: var(--color-grey3);
 }
 
 header {
@@ -211,9 +224,9 @@ section {
 				height: 100%;
 				object-fit: cover;
 				transition: var(--primary-transition);
-				filter: grayscale(100%);
+				filter: grayscale(0%);
 				&:hover {
-					filter: grayscale(0%);
+					filter: grayscale(100%);
 				}
 			}
 		}
@@ -336,19 +349,31 @@ section {
 						width: 90%;
 					}
 					.css {
-						width: 85%;
+						width: 88%;
 					}
 					.java {
-						width: 80%;
+						width: 90%;
 					}
-					.javascript {
-						width: 95%;
+					.js {
+						width: 94%;
 					}
 					.python {
-						width: 95%;
+						width: 90%;
 					}
 					.cpp {
+						width: 86%;
+					}
+					.sql {
+						width: 85%;
+					}
+					.mongo {
 						width: 90%;
+					}
+					.documentation {
+						width: 85%;
+					}
+					.debugging {
+						width: 100%;
 					}
 				}
 			}
@@ -658,6 +683,23 @@ section {
 }
 
 //Styling indepenedent components
+
+.typewriter {
+	.txt {
+		border-right: 0.2rem solid var(--color-secondary);
+		animation: blink 400ms steps(40) infinite;
+	}
+	@keyframes blink {
+		from,
+		to {
+			border-color: transparent;
+		}
+		50% {
+			border-color: var(--color-secondary);
+		}
+	}
+}
+
 .btn-container {
 	display: flex;
 	align-self: flex-start;
