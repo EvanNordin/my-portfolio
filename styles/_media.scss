@@ -15,21 +15,22 @@
 		grid-template-columns: repeat(1, 1fr);
 		padding-bottom: 6rem;
 	}
-
-	.left-header {
-		.h-shape {
-			display: none;
-		}
-	}
 	.right-header {
 		grid-row: 1;
 		padding-right: 0rem !important;
 		width: 90%;
 		margin: 0 auto;
 		.name {
-			font-size: 2.5rem !important;
+			font-size: 1.5rem !important;
 			text-align: center;
 			padding-top: 3rem;
+		}
+		h2{
+			font-size: 1.25rem !important;
+			text-align: center;
+		}
+		p{
+			text-align: center;
 		}
 	}
 	.header-content .left-header .image {
@@ -37,30 +38,25 @@
 		width: 90%;
 	}
 
-	.controls {
-		top: auto;
-		bottom: 0;
-		flex-direction: row;
-		justify-content: center;
-		left: 50%;
-		transform: translateX(-50%);
-		width: 100%;
-		background-color: var(--color-grey-5);
-		.control {
-			margin: 1rem 0.3rem;
-		}
+	.section {
+		padding: 2rem 0.5rem;	}
+
+	.about{
+		padding: 4rem 0 !important;
 	}
 
 	.about-container {
+		text-align: center;
 		grid-template-columns: repeat(1, 1fr);
+		padding: 0;
 		.right-about {
+			padding: 0;
 			grid-template-columns: repeat(1, 1fr);
-			padding-top: 2.5rem;
 		}
 		.left-about {
-			padding-right: 0;
+			padding: 0;
 			p {
-				padding-left: 0;
+				padding:0;
 			}
 		}
 	}
@@ -68,10 +64,6 @@
 	.timeline {
 		grid-template-columns: repeat(1, 1fr);
 		padding-bottom: 6rem;
-	}
-
-	.section {
-		padding: 2rem 2.5rem !important;
 	}
 
 	.about-stats {
@@ -169,6 +161,9 @@
 			}
 		}
 	}
+	.header-content{
+		grid-template-columns: (1,2fr);
+	}
 }
 
 @media screen and (max-width: 1250px) {
@@ -180,8 +175,9 @@
 		grid-template-columns: repeat(2, 1fr);
 	}
 	.header-content .right-header {
-		padding-right: 9rem;
+		padding-right: 4.5rem;
 	}
+
 }
 @media screen and (max-width: 660px) {
 	.blogs {
@@ -219,11 +215,6 @@
 	.about-container .left-about {
 		padding-right: 0rem;
 	}
-	.header-content {
-		grid-template-columns: repeat(1, 1fr);
-		padding-bottom: 6rem;
-	}
-
 	.left-header {
 		.h-shape {
 			display: none;
@@ -231,30 +222,20 @@
 		.image {
 			width: 90% !important;
 			margin: 0 auto !important;
-			display: none;
 		}
 	}
-	.right-header {
-		grid-row: 1;
-		padding-right: 0rem !important;
-		width: 90%;
-		margin: 0 auto;
-		.name {
-			font-size: 1.5rem !important;
-			text-align: center;
-			padding-top: 3rem;
+	.controls {
+		top: auto;
+		bottom: 0;
+		flex-direction: row;
+		justify-content: center;
+		left: 50%;
+		transform: translateX(-50%);
+		width: 100%;
+		background-color: var(--color-grey-5);
+		.control {
+			margin: 1rem 0.3rem;
 		}
-		h2 {
-			font-size: 1.25rem !important;
-			text-align: center;
-		}
-		p {
-			font-size: 1rem !important;
-			text-align: center;
-		}
-	}
-	.theme-btn {
-		right: 10%;
 	}
 	.btn-container {
 		align-self: center;

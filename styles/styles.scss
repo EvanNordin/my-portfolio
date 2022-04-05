@@ -235,9 +235,10 @@ section {
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
-		padding-right: 18rem;
+		padding-right: 7rem;
 		.name {
 			font-size: 3rem;
+			white-space: nowrap;
 			span {
 				color: var(--color-secondary);
 			}
