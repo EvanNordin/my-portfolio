@@ -11,10 +11,7 @@
 		width: 50px;
 		height: 50px;
 	}
-	.header-content {
-		grid-template-columns: repeat(1, 1fr);
-		padding-bottom: 6rem;
-	}
+
 	.right-header {
 		grid-row: 1;
 		padding-right: 0rem !important;
@@ -25,11 +22,11 @@
 			text-align: center;
 			padding-top: 3rem;
 		}
-		h2{
+		h2 {
 			font-size: 1.25rem !important;
 			text-align: center;
 		}
-		p{
+		p {
 			text-align: center;
 		}
 	}
@@ -39,31 +36,42 @@
 	}
 
 	.section {
-		padding: 2rem 0.5rem;	}
+		padding: 2rem 0.5rem;
+	}
 
-	.about{
+	.about {
 		padding: 4rem 0 !important;
 	}
 
 	.about-container {
+		display: flex;
+		flex-direction: column;
 		text-align: center;
-		grid-template-columns: repeat(1, 1fr);
 		padding: 0;
 		.right-about {
-			padding: 0;
-			grid-template-columns: repeat(1, 1fr);
+			padding: 1rem;
+			.about-item {
+				.about-text {
+					font-size: 1.25rem !important;
+					padding: 1.5rem 0;
+				}
+			}
 		}
 		.left-about {
-			padding: 0;
+			padding: 2rem;
 			p {
-				padding:0;
+				padding: 0;
 			}
 		}
 	}
 
+	.about-stats {
+		padding: 0 1rem;
+	}
+
 	.timeline {
 		grid-template-columns: repeat(1, 1fr);
-		padding-bottom: 6rem;
+		padding: 0.5rem 3.25rem;
 	}
 
 	.about-stats {
@@ -161,12 +169,12 @@
 			}
 		}
 	}
-	.header-content{
-		grid-template-columns: (1,2fr);
+	.header-content {
+		grid-template-columns: (1, 2fr);
 	}
 }
 
-@media screen and (max-width: 1250px) {
+@media screen and (max-width: 1536px) {
 	.blogs {
 		grid-template-columns: repeat(2, 1fr);
 		margin-top: 6rem;
@@ -174,10 +182,19 @@
 	.portfolio-items {
 		grid-template-columns: repeat(2, 1fr);
 	}
-	.header-content .right-header {
-		padding-right: 4.5rem;
+	// .header-content .right-header {
+	// 	padding-right: 4.5rem;
+	// }
+	.about-container {
+		.right-about {
+			grid-template-columns: repeat(1, 1fr);
+		}
 	}
-
+	.btn-container {
+		align-self: center;
+		justify-content: center;
+		margin: 1rem;
+	}
 }
 @media screen and (max-width: 660px) {
 	.blogs {
@@ -189,12 +206,6 @@
 }
 
 @media screen and (max-width: 1070px) {
-	.about-container {
-		grid-template-columns: repeat(1, 1fr);
-		.right-about {
-			padding-top: 2.5rem;
-		}
-	}
 	.main-title {
 		h2 {
 			font-size: 4rem;
@@ -210,18 +221,27 @@
 
 @media screen and (max-width: 970px) {
 	.section {
-		padding: 7rem 6rem;
+		padding: 8rem 2rem;
+    	overflow-y: scroll;
 	}
-	.about-container .left-about {
-		padding-right: 0rem;
-	}
-	.left-header {
-		.h-shape {
-			display: none;
+	.header-content {
+		grid-template-columns: repeat(1, 1fr);
+		padding-bottom: 6rem;
+		.left-header {
+			.h-shape {
+				display: none;
+			}
+			.image {
+				width: 90% !important;
+				margin: 0 auto !important;
+			}
 		}
-		.image {
-			width: 90% !important;
-			margin: 0 auto !important;
+		.right-header {
+			-ms-grid-row: 1;
+			grid-row: 1;
+			padding-right: 0rem !important;
+			width: 90%;
+			margin: 0 auto;
 		}
 	}
 	.controls {
@@ -236,9 +256,6 @@
 		.control {
 			margin: 1rem 0.3rem;
 		}
-	}
-	.btn-container {
-		align-self: center;
 	}
 }
 @media screen and (max-width: 700px) {
