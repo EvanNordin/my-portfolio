@@ -1087,7 +1087,7 @@ section {
     padding: 2rem 0.5rem;
   }
   .about {
-    padding: 4rem 0 !important;
+    padding: 0 !important;
   }
   .about-container {
     display: -webkit-box;
