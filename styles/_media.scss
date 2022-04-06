@@ -40,12 +40,11 @@
 	}
 
 	.about {
-		padding: 0 !important;
+		padding: 4rem 0 !important;
 	}
 
 	.about-container {
-		display: flex;
-		flex-direction: column;
+		grid-template-columns: repeat(1, 1fr);
 		text-align: center;
 		padding: 0;
 		.right-about {
@@ -222,7 +221,7 @@
 @media screen and (max-width: 970px) {
 	.section {
 		padding: 8rem 2rem;
-    	overflow-y: scroll;
+    	// overflow-y: scroll;
 	}
 	.header-content {
 		grid-template-columns: repeat(1, 1fr);
