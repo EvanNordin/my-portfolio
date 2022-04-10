@@ -628,8 +628,27 @@ section {
   position: relative;
   background-color: var(--color-grey5);
   border-radius: 5px;
-  -webkit-box-shadow: var(--box-shadow-2);
-          box-shadow: var(--box-shadow-2);
+  -webkit-box-shadow: var(--box-shadow-1);
+          box-shadow: var(--box-shadow-1);
+  -webkit-transition: var(--primary-transition);
+  transition: var(--primary-transition);
+}
+
+.portfolio-items .portfolio-item:hover {
+  position: relative;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.6) 2px 15px 17px;
+          box-shadow: rgba(0, 0, 0, 0.6) 2px 15px 17px;
+  -webkit-transform: translateY(-5px);
+          transform: translateY(-5px);
+}
+
+.portfolio-items .portfolio-item:hover img {
+  -webkit-filter: blur(0px);
+          filter: blur(0px);
+}
+
+.portfolio-items .portfolio-item:hover .project-text h4 {
+  color: var(--color-secondary);
 }
 
 .portfolio-items .portfolio-item img {
@@ -638,6 +657,8 @@ section {
   -o-object-fit: cover;
   object-fit: fill;
   border-radius: 5px 5px 0 0;
+  -webkit-transition: var(--primary-transition);
+  transition: var(--primary-transition);
   -webkit-filter: blur(2px);
           filter: blur(2px);
 }
@@ -655,10 +676,6 @@ section {
   color: var(--color-grey1);
   -webkit-transition: var(--primary-transition);
   transition: var(--primary-transition);
-}
-
-.portfolio-items .portfolio-item .project-text h4:hover {
-  color: var(--color-secondary);
 }
 
 .portfolio-items .portfolio-item .project-text p {
@@ -692,6 +709,7 @@ section {
   width: 50px;
   height: 50px;
   border-radius: 50%;
+  margin: 0 .5rem;
   background-color: var(--color-secondary);
   -webkit-box-shadow: var(--box-shadow-1);
           box-shadow: var(--box-shadow-1);
