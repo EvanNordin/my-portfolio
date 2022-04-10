@@ -478,26 +478,27 @@
                                 </a>
                             </div>
                         </div>
+                        <div class="g-recaptcha" data-sitekey="6LdHIXsdAAAAAGPR8xxVllN3nz0CfNjHw7wwX3Pq"></div>
                     </div>
                     <div class="right-contact">
                         <form action="" class="contact-form">
                             <div class="input-control i-c-2">
-                                <input type="text" name="" id="" required placeholder="YOUR NAME">
-                                <input type="text" name="" id="" required placeholder="YOUR EMAIL">
+                                <input type="text" name="name" id="name" required placeholder="YOUR NAME" required
+                                    minlength="8" maxlength="120">
+                                <input type="text" name="email" id="email" required placeholder="YOUR EMAIL" required
+                                    pattern="^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$"
+                                    minlength="3" maxlength="254">
                             </div>
                             <div class="input-control">
-                                <input type="text" name="" id="" required placeholder="ENTER SUBJECT">
+                                <input type="text" name="subject" id="subject" required placeholder="ENTER SUBJECT">
                             </div>
                             <div class="input-control">
-                                <textarea name="" id="" cols="15" rows="8" required
+                                <textarea name="message" id="message" cols="15" rows="8" required
                                     placeholder="ENTER YOUR MESSAGE TO ME HERE..."></textarea>
                             </div>
                             <div class="submit-btn">
-                                <div class="g-recaptcha" data-sitekey="6LdHIXsdAAAAAGPR8xxVllN3nz0CfNjHw7wwX3Pq"></div>
-                                <a href="#" class="main-btn" id="submit-btn">
-                                    <span class="btn-text">Submit</span>
-                                    <span class="btn-icon"><i class="fa-solid fa-paper-plane"></i></span>
-                                </a>
+                                <button type="submit" id="submit-btn"><span class="btn-text">Submit</span>
+                                    <span class="btn-icon"><i class="fa-solid fa-paper-plane"></i></span></button>
                             </div>
                         </form>
                     </div>
