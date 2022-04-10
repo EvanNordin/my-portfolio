@@ -803,4 +803,16 @@ section {
 	}
 }
 
+// display the privacy link at the bottom of each page
+.privacy{
+    display: flex;
+    text-align: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-self: auto;
+    /* padding-top: 1rem; */
+    position: absolute;
+    bottom: 0;
+}
+
 @import "./media";
