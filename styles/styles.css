@@ -341,7 +341,7 @@ section {
 .header-content .right-header p {
   margin: 1.5rem 0;
   line-height: 2rem;
-  padding-right: 2rem;
+  padding-right: 6.5rem;
 }
 
 .about-container {
@@ -350,7 +350,7 @@ section {
   -ms-grid-columns: (1fr)[2];
       grid-template-columns: repeat(2, 1fr);
   padding-top: 3.5rem;
-  padding-bottom: 5rem;
+  padding-bottom: 2.5rem;
 }
 
 .about-container .right-about {
@@ -643,8 +643,12 @@ section {
 }
 
 .portfolio-items .portfolio-item:hover img {
-  -webkit-filter: blur(0px);
-          filter: blur(0px);
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-filter: blur(0);
+          filter: blur(0);
+  -webkit-box-shadow: var(--box-shadow-2);
+          box-shadow: var(--box-shadow-2);
 }
 
 .portfolio-items .portfolio-item:hover .project-text h4 {
@@ -659,8 +663,8 @@ section {
   border-radius: 5px 5px 0 0;
   -webkit-transition: var(--primary-transition);
   transition: var(--primary-transition);
-  -webkit-filter: blur(2px);
-          filter: blur(2px);
+  -webkit-filter: blur(3px);
+          filter: blur(3px);
 }
 
 .portfolio-items .portfolio-item .project-text {
@@ -725,7 +729,7 @@ section {
 }
 
 .portfolio-items .portfolio-item .pill-btns .pill-btn:hover .icon {
-  color: #000;
+  color: var(--color-primary);
 }
 
 .portfolio-items .portfolio-item .pill-btns .pill-btn:active {
@@ -1030,6 +1034,33 @@ section {
       -ms-flex-align: center;
           align-items: center;
   overflow: hidden;
+  background: -webkit-gradient(linear, right top, left top, color-stop(50%, var(--color-secondary)), color-stop(50%, var(--color-primary)));
+  background: linear-gradient(to left, var(--color-secondary) 50%, var(--color-primary) 50%);
+  background-size: 200% 100%;
+  background-position: left bottom;
+  -webkit-transition: var(--primary-transition);
+  transition: var(--primary-transition);
+}
+
+.main-btn:hover {
+  background-position: right bottom;
+}
+
+.main-btn:hover .btn-text {
+  color: var(--color-primary);
+  -webkit-transition: var(--primary-transition);
+  transition: var(--primary-transition);
+}
+
+.main-btn:hover .btn-icon {
+  -webkit-transition: var(--primary-transition);
+  transition: var(--primary-transition);
+}
+
+.main-btn:hover .btn-icon i {
+  -webkit-transition: var(primary);
+  transition: var(primary);
+  color: var(--color-primary);
 }
 
 .main-btn .btn-text {
@@ -1049,26 +1080,6 @@ section {
           justify-content: center;
   border-radius: 50%;
   padding: 1rem;
-}
-
-.main-btn::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  -webkit-transform: translateX(100%);
-          transform: translateX(100%);
-  -webkit-transition: var(--primary-transition);
-  transition: var(--primary-transition);
-  z-index: -1;
-}
-
-.main-btn:hover::before {
-  width: 100%;
-  height: 100%;
-  background-color: var(--color-secondary);
-  -webkit-transform: translateX(0%);
-          transform: translateX(0%);
 }
 
 .main-title {
@@ -1133,6 +1144,11 @@ section {
   }
   .right-header p {
     text-align: center;
+    margin: 1rem 0 !important;
+    padding: 0 0.5rem !important;
+  }
+  .header-content .left-header {
+    padding-bottom: 4rem;
   }
   .header-content .left-header .image {
     margin: 0 auto;
@@ -1158,7 +1174,7 @@ section {
     padding: 1.5rem 0;
   }
   .about-container .left-about {
-    padding: 2rem;
+    padding: 0 1.5rem;
   }
   .about-container .left-about p {
     padding: 0;

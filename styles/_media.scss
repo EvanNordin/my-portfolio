@@ -28,11 +28,16 @@
 		}
 		p {
 			text-align: center;
+			margin: 1rem 0 !important;
+			padding: 0 0.5rem !important;
 		}
 	}
-	.header-content .left-header .image {
-		margin: 0 auto;
-		width: 90%;
+	.header-content .left-header {
+		padding-bottom: 4rem;
+		.image {
+			margin: 0 auto;
+			width: 90%;
+		}
 	}
 
 	.section {
@@ -57,7 +62,7 @@
 			}
 		}
 		.left-about {
-			padding: 2rem;
+			padding: 0 1.5rem;
 			p {
 				padding: 0;
 			}

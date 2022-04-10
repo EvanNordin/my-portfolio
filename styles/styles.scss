@@ -251,7 +251,7 @@ section {
 		p {
 			margin: 1.5rem 0;
 			line-height: 2rem;
-			padding-right: 2rem;
+			padding-right: 6.5rem;
 		}
 	}
 }
@@ -262,7 +262,7 @@ section {
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
 	padding-top: 3.5rem;
-	padding-bottom: 5rem;
+	padding-bottom: 2.5rem;
 	.right-about {
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
@@ -477,7 +477,9 @@ section {
 			box-shadow: rgba(0, 0, 0, 0.6) 2px 15px 17px;
 			transform: translateY(-5px);
 			img{
-				filter: blur(0px);
+				transform: scale(1.1);
+				filter: blur(0);
+				box-shadow: var(--box-shadow-2);
 			}
 			.project-text{
 				h4{
@@ -492,7 +494,7 @@ section {
 			object-fit: fill;
 			border-radius: 5px 5px 0 0;
 			transition: var(--primary-transition);
-			filter: blur(2px);
+			filter: blur(3px);
 		}
 		.project-text {
 			margin-top: -7px;
@@ -532,7 +534,7 @@ section {
 				&:hover{
 					background-color: var(--color-secondary-alternate);
 					.icon{
-						color: #000;
+						color: var(--color-primary);
 					}
 
 				}
@@ -744,10 +746,27 @@ section {
 	align-self: flex-start;
 	align-items: center;
 	overflow: hidden;
-	// transition: var(--primary-transition);
+	background: linear-gradient(to left, var(--color-secondary) 50%, var(--color-primary) 50%);
+  	background-size: 200% 100%;
+  	background-position: left bottom;
+  	transition: var(--primary-transition);
+	&:hover {
+		background-position: right bottom;
+		.btn-text {
+			color: var(--color-primary);
+			transition: var(--primary-transition);
+		}
+		.btn-icon {
+			transition: var(--primary-transition);
+			i{
+				transition: var(primary);
+				color: var(--color-primary);
+			}
+		}
+
+	}
 	.btn-text {
 		padding: 0 2rem;
-		// transition: var(--primary-transition);
 	}
 	.btn-icon {
 		background-color: var(--color-secondary);
@@ -756,25 +775,8 @@ section {
 		justify-content: center;
 		border-radius: 50%;
 		padding: 1rem;
-		// transition: var(--primary-transition);
 	}
-	&::before {
-		content: "";
-		position: absolute;
-		top: 0;
-		right: 0;
-		transform: translateX(100%);
-		transition: var(--primary-transition);
-		z-index: -1;
-	}
-	&:hover {
-		&::before {
-			width: 100%;
-			height: 100%;
-			background-color: var(--color-secondary);
-			transform: translateX(0%);
-		}
-	}
+
 }
 .main-title {
 	text-align: center;
