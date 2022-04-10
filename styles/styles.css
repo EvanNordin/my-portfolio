@@ -4,7 +4,7 @@
   --box-shadow-2: 2px 12px 15px rgba(0, 0, 0, .5);
   --color-primary: #191d2b;
   --color-secondary: #27ae60;
-  --color-secondary-alternate: #00c2f3;
+  --color-secondary-alternate: #00ff6a;
   --color-white: #ffffff;
   --color-black: #000;
   --color-grey0: #f8f8f8;
@@ -20,7 +20,7 @@
 .light-theme {
   --color-primary: #ffffff;
   --color-secondary: #00c2f3;
-  --color-secondary-alternate: #27ae60;
+  --color-secondary-alternate: #00d9ff;
   --color-white: #454e56;
   --color-black: #000;
   --color-grey0: #f8f8f8;
@@ -652,6 +652,9 @@ section {
   font-size: 1.5rem;
   margin-bottom: 0.7rem;
   cursor: pointer;
+  color: var(--color-grey1);
+  -webkit-transition: var(--primary-transition);
+  transition: var(--primary-transition);
 }
 
 .portfolio-items .portfolio-item .project-text h4:hover {
@@ -718,8 +721,8 @@ section {
   text-align: center;
   font-size: 1.3rem;
   color: var(--color-white);
-  -webkit-transition: var(--color-white);
-  transition: var(--color-white);
+  -webkit-transition: var(--primary-transition);
+  transition: var(--primary-transition);
 }
 
 .portfolio-item:hover .hover-item,
