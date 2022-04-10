@@ -2,6 +2,7 @@ const sections = document.querySelectorAll('.section');
 const sectBtns = document.querySelectorAll('.controls');
 const sectBtn = document.querySelectorAll('.control');
 const allSections = document.querySelector('.main-content');
+const submitBtn = document.querySelector('#submit-btn');
 
 const PageTransitions = () => {
     //Manpiulating active buttons
@@ -37,4 +38,8 @@ const PageTransitions = () => {
 }
 
 PageTransitions();
+
+submitBtn.addEventListener('click', (event) => {
+    
+})
 
