@@ -980,9 +980,9 @@ section {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .typewriter .txt {
@@ -1091,6 +1091,7 @@ section {
   text-transform: uppercase;
   font-size: 4rem;
   font-weight: 700;
+  color: var(--color-white);
 }
 
 .main-title h2 span {
@@ -1122,8 +1123,8 @@ button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-item-align: start;
-      align-self: flex-start;
+  -ms-flex-item-align: center;
+      align-self: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -1256,6 +1257,10 @@ button .btn-icon {
     padding-bottom: 4.5rem;
     padding-left: 7.25rem;
   }
+  #portfolio .privacy, #blogs .privacy, #contact .privacy {
+    padding-bottom: 4.5rem;
+    padding-left: 4rem !important;
+  }
   .about {
     padding: 4rem 0 !important;
   }
@@ -1284,7 +1289,8 @@ button .btn-icon {
   .timeline {
     -ms-grid-columns: (1fr)[1];
         grid-template-columns: repeat(1, 1fr);
-    padding: 0.5rem 3.25rem;
+    padding: 0 3.25rem;
+    padding-bottom: 2rem;
   }
   .about-stats .progress-bars {
     -ms-grid-columns: (1fr)[1];
@@ -1299,17 +1305,28 @@ button .btn-icon {
   .blogs {
     -ms-grid-columns: (1fr)[1];
         grid-template-columns: repeat(1, 1fr);
-    padding-bottom: 6rem;
+    padding-bottom: 3rem;
   }
   .blogs .privacy {
     padding-bottom: 4.5rem;
     padding-left: 7.25rem;
   }
+  .contact {
+    text-align: center;
+  }
   .contact-content-container {
+    padding-top: 0;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+  }
+  .contact-content-container .left-contact {
+    padding: 0 1rem;
+  }
+  .contact-content-container .left-contact h2 {
+    font-size: 1.25rem !important;
+    text-align: center;
   }
   .contact-content-container .right-contact {
     margin-left: 0;
@@ -1498,7 +1515,8 @@ button .btn-icon {
 
 @media screen and (max-width: 700px) {
   .section {
-    padding: 7rem 3rem;
+    padding: 0 3rem;
+    padding-top: 4rem;
   }
   .about-stats .progress-bars {
     -ms-grid-columns: (1fr)[1];

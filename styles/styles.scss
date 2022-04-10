@@ -709,7 +709,7 @@ section {
 		}
 		.submit-btn {
 			display: flex;
-			justify-content: flex-start;
+			justify-content: center;
 		}
 	}
 }
@@ -785,6 +785,7 @@ section {
 		text-transform: uppercase;
 		font-size: 4rem;
 		font-weight: 700;
+		color: var(--color-white);
 		span {
 			color: var(--color-secondary);
 			transition: var(--primary-transition);
@@ -809,7 +810,7 @@ button {
 	position: relative;
 	border: 1px solid var(--color-secondary);
 	display: flex;
-	align-self: flex-start;
+	align-self: center;
 	align-items: center;
 	overflow: hidden;
 	background: linear-gradient(to left, var(--color-secondary) 50%, var(--color-primary) 50%);

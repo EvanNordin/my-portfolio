@@ -52,6 +52,13 @@
 		}
 	}
 
+	#portfolio, #blogs, #contact {
+		.privacy{
+			padding-bottom: 4.5rem;
+			padding-left: 4rem !important;
+		}
+	}
+
 	.about {
 		padding: 4rem 0 !important;
 
@@ -84,7 +91,8 @@
 
 	.timeline {
 		grid-template-columns: repeat(1, 1fr);
-		padding: 0.5rem 3.25rem;
+		padding: 0 3.25rem;
+		padding-bottom: 2rem;
 	}
 
 	.about-stats {
@@ -101,15 +109,27 @@
 
 	.blogs {
 		grid-template-columns: repeat(1, 1fr);
-		padding-bottom: 6rem;
+		padding-bottom: 3rem;
 		.privacy{
 			padding-bottom: 4.5rem;
 			padding-left: 7.25rem;
 		}
 	}
 
+	.contact{
+		text-align: center;
+	}
+
 	.contact-content-container {
+		padding-top: 0;
 		flex-direction: column;
+		.left-contact{
+			padding: 0 1rem;
+			h2{
+				font-size: 1.25rem !important;
+    			text-align: center;
+			}
+		}
 		.right-contact {
 			margin-left: 0;
 			margin-top: 2.5rem;
@@ -285,7 +305,8 @@
 }
 @media screen and (max-width: 700px) {
 	.section {
-		padding: 7rem 3rem;
+		padding: 0 3rem;
+		padding-top: 4rem;
 	}
 	.about-stats .progress-bars {
 		grid-template-columns: repeat(1, 1fr);
