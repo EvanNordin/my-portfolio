@@ -40,6 +40,6 @@ const PageTransitions = () => {
 PageTransitions();
 
 submitBtn.addEventListener('click', (event) => {
-    
+    event.preventDefault();
 })
 
