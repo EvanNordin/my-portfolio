@@ -1472,7 +1472,7 @@ button .btn-icon {
   }
 }
 
-@media screen and (max-width: 1400px) {
+@media screen and (max-width: 970px) {
   .section {
     padding: 8rem 2rem;
   }
