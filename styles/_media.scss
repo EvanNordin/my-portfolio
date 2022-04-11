@@ -136,6 +136,7 @@
 		}
 		.submit-btn {
 			flex-direction: column;
+			justify-content: space-evenly;
 		}
 		.g-recaptcha {
 			background-color: var(primary-color);
