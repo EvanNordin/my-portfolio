@@ -1472,7 +1472,7 @@ button .btn-icon {
   }
 }
 
-@media screen and (max-width: 970px) {
+@media screen and (max-width: 1300px) {
   .section {
     padding: 8rem 2rem;
   }
@@ -1492,8 +1492,13 @@ button .btn-icon {
     -ms-grid-row: 1;
     grid-row: 1;
     padding-right: 0rem !important;
+    text-align: center;
     width: 90%;
     margin: 0 auto;
+  }
+  .header-content .right-header p {
+    padding: 0;
+    line-height: 2.5rem;
   }
   .controls {
     top: auto;
