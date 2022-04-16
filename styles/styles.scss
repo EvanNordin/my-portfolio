@@ -253,6 +253,10 @@ section {
 			line-height: 2rem;
 			padding-right: 6.5rem;
 		}
+		.btn-container{
+			display: flex;
+			align-self: flex-start;
+		}
 	}
 }
 
@@ -513,44 +517,6 @@ section {
 				padding-bottom: 1rem;
 			}
 		}
-		.pill-btns{
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			.pill-btn{
-				display: flex;
-				justify-content: center;
-				align-items: center;
-				width: 50px;
-				height: 50px;
-				border-radius: 50%;
-				margin: 0 .5rem;
-				background-color: var(--color-secondary);
-				box-shadow: var(--box-shadow-1);
-				transition: var(--primary-transition);
-				position: relative;
-				overflow: hidden;
-				cursor: pointer;
-				&:hover{
-					background-color: var(--color-secondary-alternate);
-					.icon{
-						color: var(--color-primary);
-					}
-
-				}
-				&:active{
-					transition: 0.1s;
-					transform: rotateX(360deg) scale(1.2);
-				}
-				.icon{
-					text-align: center;
-					font-size: 1.3rem;
-					color: var(--color-white);
-					transition: var(--primary-transition);
-				}			
-			}
-
-		}
 	}
 }
 
@@ -734,7 +700,7 @@ section {
 
 .btn-container {
 	display: flex;
-	align-self: flex-start;
+	align-self: center;
 }
 .main-btn {
 	border-radius: 30px;
@@ -743,10 +709,10 @@ section {
 	position: relative;
 	border: 1px solid var(--color-secondary);
 	display: flex;
-	align-self: flex-start;
+	align-self: center;
 	align-items: center;
 	overflow: hidden;
-	background: linear-gradient(to left, var(--color-secondary) 50%, var(--color-primary) 50%);
+	background: linear-gradient(to left, var(--color-secondary-alternate) 50%, var(--color-primary) 50%);
   	background-size: 200% 100%;
   	background-position: left bottom;
   	transition: var(--primary-transition);
@@ -757,9 +723,9 @@ section {
 			transition: var(--primary-transition);
 		}
 		.btn-icon {
-			transition: var(--primary-transition);
+			background-color: var(--color-secondary-alternate);
 			i{
-				transition: var(primary);
+				transition: var(--primary-transition);
 				color: var(--color-primary);
 			}
 		}
@@ -770,6 +736,7 @@ section {
 	}
 	.btn-icon {
 		background-color: var(--color-secondary);
+		transition: var(--primary-transition);
 		display: flex;
 		align-items: center;
 		justify-content: center;
@@ -842,6 +809,45 @@ button {
 		justify-content: center;
 		border-radius: 50%;
 		padding: 1rem;
+	}
+
+}
+
+.pill-btns{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	.pill-btn{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 50px;
+		height: 50px;
+		border-radius: 50%;
+		margin: 0 .5rem;
+		background-color: var(--color-secondary);
+		box-shadow: var(--box-shadow-1);
+		transition: var(--primary-transition);
+		position: relative;
+		overflow: hidden;
+		cursor: pointer;
+		&:hover{
+			background-color: var(--color-secondary-alternate);
+			.icon{
+				color: var(--color-primary);
+			}
+
+		}
+		&:active{
+			transition: 0.1s;
+			transform: rotateX(360deg) scale(1.2);
+		}
+		.icon{
+			text-align: center;
+			font-size: 1.3rem;
+			color: var(--color-white);
+			transition: var(--primary-transition);
+		}			
 	}
 
 }

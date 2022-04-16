@@ -344,6 +344,14 @@ section {
   padding-right: 6.5rem;
 }
 
+.header-content .right-header .btn-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+}
+
 .about-container {
   display: -ms-grid;
   display: grid;
@@ -688,65 +696,6 @@ section {
   padding-bottom: 1rem;
 }
 
-.portfolio-items .portfolio-item .pill-btns {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.portfolio-items .portfolio-item .pill-btns .pill-btn {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  margin: 0 .5rem;
-  background-color: var(--color-secondary);
-  -webkit-box-shadow: var(--box-shadow-1);
-          box-shadow: var(--box-shadow-1);
-  -webkit-transition: var(--primary-transition);
-  transition: var(--primary-transition);
-  position: relative;
-  overflow: hidden;
-  cursor: pointer;
-}
-
-.portfolio-items .portfolio-item .pill-btns .pill-btn:hover {
-  background-color: var(--color-secondary-alternate);
-}
-
-.portfolio-items .portfolio-item .pill-btns .pill-btn:hover .icon {
-  color: var(--color-primary);
-}
-
-.portfolio-items .portfolio-item .pill-btns .pill-btn:active {
-  -webkit-transition: 0.1s;
-  transition: 0.1s;
-  -webkit-transform: rotateX(360deg) scale(1.2);
-          transform: rotateX(360deg) scale(1.2);
-}
-
-.portfolio-items .portfolio-item .pill-btns .pill-btn .icon {
-  text-align: center;
-  font-size: 1.3rem;
-  color: var(--color-white);
-  -webkit-transition: var(--primary-transition);
-  transition: var(--primary-transition);
-}
-
 .portfolio-item:hover .hover-item,
 .portfolio-item:active .hover-item {
   opacity: 1;
@@ -1015,8 +964,8 @@ section {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-item-align: start;
-      align-self: flex-start;
+  -ms-flex-item-align: center;
+      align-self: center;
 }
 
 .main-btn {
@@ -1028,14 +977,14 @@ section {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-item-align: start;
-      align-self: flex-start;
+  -ms-flex-item-align: center;
+      align-self: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   overflow: hidden;
-  background: -webkit-gradient(linear, right top, left top, color-stop(50%, var(--color-secondary)), color-stop(50%, var(--color-primary)));
-  background: linear-gradient(to left, var(--color-secondary) 50%, var(--color-primary) 50%);
+  background: -webkit-gradient(linear, right top, left top, color-stop(50%, var(--color-secondary-alternate)), color-stop(50%, var(--color-primary)));
+  background: linear-gradient(to left, var(--color-secondary-alternate) 50%, var(--color-primary) 50%);
   background-size: 200% 100%;
   background-position: left bottom;
   -webkit-transition: var(--primary-transition);
@@ -1053,13 +1002,12 @@ section {
 }
 
 .main-btn:hover .btn-icon {
-  -webkit-transition: var(--primary-transition);
-  transition: var(--primary-transition);
+  background-color: var(--color-secondary-alternate);
 }
 
 .main-btn:hover .btn-icon i {
-  -webkit-transition: var(primary);
-  transition: var(primary);
+  -webkit-transition: var(--primary-transition);
+  transition: var(--primary-transition);
   color: var(--color-primary);
 }
 
@@ -1069,6 +1017,8 @@ section {
 
 .main-btn .btn-icon {
   background-color: var(--color-secondary);
+  -webkit-transition: var(--primary-transition);
+  transition: var(--primary-transition);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1175,6 +1125,65 @@ button .btn-icon {
           justify-content: center;
   border-radius: 50%;
   padding: 1rem;
+}
+
+.pill-btns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.pill-btns .pill-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin: 0 .5rem;
+  background-color: var(--color-secondary);
+  -webkit-box-shadow: var(--box-shadow-1);
+          box-shadow: var(--box-shadow-1);
+  -webkit-transition: var(--primary-transition);
+  transition: var(--primary-transition);
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.pill-btns .pill-btn:hover {
+  background-color: var(--color-secondary-alternate);
+}
+
+.pill-btns .pill-btn:hover .icon {
+  color: var(--color-primary);
+}
+
+.pill-btns .pill-btn:active {
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
+  -webkit-transform: rotateX(360deg) scale(1.2);
+          transform: rotateX(360deg) scale(1.2);
+}
+
+.pill-btns .pill-btn .icon {
+  text-align: center;
+  font-size: 1.3rem;
+  color: var(--color-white);
+  -webkit-transition: var(--primary-transition);
+  transition: var(--primary-transition);
 }
 
 .privacy {
